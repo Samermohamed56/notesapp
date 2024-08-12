@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notesapp/cubits/notescubit/notescubit.dart';
 import 'package:notesapp/models/notemodel.dart';
+import 'package:notesapp/widgets/colors_list_view.dart';
 import 'package:notesapp/widgets/custemtextfield.dart';
 import 'package:notesapp/widgets/custumappbar.dart';
+import 'package:notesapp/widgets/editnoteslistview.dart';
 
 class Editnotebody extends StatefulWidget {
   const Editnotebody({super.key, required this.notemodel});
@@ -55,6 +57,7 @@ class _EditnotebodyState extends State<Editnotebody> {
                 hintText: "Subtitle",
                 maxLines: 5,
               ),
+               Editnoteslistview(notemodel: widget.notemodel,)
             ],
           ),
         ),
